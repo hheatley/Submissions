@@ -1,0 +1,86 @@
+#CONCEPTUAL
+Dept
+-
+dept_no 
+dept_name 
+
+Dept_Emp
+-
+emp_no 
+dept_no 
+from_date 
+to_date 
+
+Dept_Mgr
+-
+dept_no 
+emp_no 
+from_date
+to_date 
+
+Employees
+-
+emp_no 
+birth_date
+first_name
+last_name
+gender 
+hire_date
+
+Salaries
+-
+emp_no 
+salary 
+from_date 
+to_date 
+ 
+Titles
+-
+emp_no 
+title 
+from_date
+to_date 
+---------------------------------------
+#LOGICAL
+#PHYSICAL
+Dept
+-
+dept_no VARCHAR PK
+dept_name VARCHAR
+
+Dept_Mgr
+-
+dept_no VARCHAR FK >- Dept.dept_no
+emp_no NUMERIC FK >- Employees.emp_no
+from_date DATE
+to_date DATE
+
+Employees
+-
+emp_no NUMERIC PK
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+gender CHAR(1)
+hire_date DATE
+
+Salaries
+-
+emp_no NUMERIC FK >- Employees.emp_no
+salary FLOAT
+from_date DATE
+to_date DATE
+ 
+Titles
+-
+emp_no NUMERIC FK >- Employees.emp_no
+title VARCHAR
+from_date DATE
+to_date DATE
+
+Dept_Emp
+-
+emp_no NUMERIC FK >- Employees.emp_no
+dept_no VARCHAR FK >- Dept.dept_no
+from_date DATE
+to_date DATE
