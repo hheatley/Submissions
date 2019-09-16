@@ -1,0 +1,78 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <title>Weather Analysis Visualization</title>
+</head>
+<body style="background-color: lightgray">
+         <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Lattitude</a>
+                    </div>
+        
+                    <div class="nav navbar-nav navbar-right">
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="temp.html">Max Temperature</a></li>
+                                <li><a href="humid.html">Humidity</a></li>
+                                <li><a href="cloud.html">Cloudiness</a></li>
+                                <li><a href="wind.html">Wind Speed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="comp.html"> Comparison</a></li>
+                        <li><a href="data.html"> Data</a></li>                                           
+                    </div>
+                </div>      
+            </nav>      
+            <div class = "container">
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                <br>
+                <h1>Comparison: Latitude vs X</h1> 
+                <h2 align="center">Click any plot to get an in-depth analysis.</h2>
+                <hr>
+                  <div class="col-md-6 col-sm-12">
+                      <h3>vs. max temperature</h3>
+                      <a href="temp.html">
+                      <img id ="pic1" src="../results/City_latitude_Vs_Max_Temperature.png" alt="temp"></a>
+                    </div>
+                  <div class="col-md-6 col-sm-12">
+                      <h3>vs. humidity</h3>
+                      <a href="humid.html">
+                        <img id ="pic2" src="../results/City_latitude_Vs_Humidity.png" alt="humid"></a>
+                    </div>
+                <br/>
+                  <div class="col-md-6 col-sm-12">
+                      <h3>vs. Cloudiness</h3>
+                      <a href="cloud.html">
+                    <img id = "pic3" src="../results/City_latitude_Vs_Cloudiness.png" alt="cloud"></a>
+                    </div>
+                  <div class="col-md-6 col-sm-12">
+                      <h3>vs. Windspeed</h3>
+                      <a href="wind.html">
+                    <img id = "pic4" src="../results/City_latitude_Vs_Windspeed.png" alt="wind"></a>
+                    </div>
+        </div>
+    </div>
+</body>
+</html>

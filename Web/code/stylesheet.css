@@ -1,0 +1,88 @@
+  
+/* Add your styles here */
+.navbar {
+    color: darkgrey;
+    background: whitesmoke;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.navbar-brand {
+    color: darkgrey;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: aqua;
+}
+.navbar li a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: darkgrey;
+  }
+.container {
+    display: block;
+    background-color: whitesmoke;
+}
+.container h1 {
+    color:  teal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.container h2 {
+    color:  darkgrey;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.container p {
+    display: inline-block;
+    padding: 10px;
+    line-height: 2.2;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: darkgrey);
+}
+.container img {
+    display: block;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+}     
+.container img:hover{
+    box-shadow: 0 0 2px 1px teal;
+}
+.container h3 {
+    color:  darkgrey;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.row {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid aqua; 
+}
+.container col {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.panel {
+    border: 1px solid darkgrey;
+}
+.boxx {
+    border: solid rgb(15, 168, 168);
+}
+.table-striped {
+    background-color:lightgray;
+}
+
+
+
