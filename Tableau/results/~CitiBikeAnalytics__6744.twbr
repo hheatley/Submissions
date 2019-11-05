@@ -1,0 +1,3747 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xml:base='https://prod-useast-a.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='CitiBikeAnalytics' path='/t/publishedcontent/workbooks' revision='1.2' site='publishedcontent' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Bicycle Routes' inline='true' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='all' name='textscan.1exv02o185fd6y195wavg041se9c'>
+            <connection class='textscan' directory='C:/Users/HHeatley/Documents/GitHub/ClassSubmissions/Submissions/Tableau/data/clean' filename='all.txt' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1exv02o185fd6y195wavg041se9c' name='all.txt' table='[all#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tripduration' ordinal='0' />
+            <column datatype='datetime' name='starttime' ordinal='1' />
+            <column datatype='datetime' name='stoptime' ordinal='2' />
+            <column datatype='integer' name='start station id' ordinal='3' />
+            <column datatype='string' name='start station name' ordinal='4' />
+            <column datatype='real' name='start station latitude' ordinal='5' />
+            <column datatype='real' name='start station longitude' ordinal='6' />
+            <column datatype='integer' name='end station id' ordinal='7' />
+            <column datatype='string' name='end station name' ordinal='8' />
+            <column datatype='real' name='end station latitude' ordinal='9' />
+            <column datatype='real' name='end station longitude' ordinal='10' />
+            <column datatype='integer' name='bikeid' ordinal='11' />
+            <column datatype='string' name='usertype' ordinal='12' />
+            <column datatype='integer' name='birth year' ordinal='13' />
+            <column datatype='integer' name='gender' ordinal='14' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[all.txt]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+          <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+            <value>1946</value>
+            <value>1947</value>
+            <value>1948</value>
+            <value>1949</value>
+            <value>1950</value>
+            <value>1951</value>
+            <value>1952</value>
+            <value>1953</value>
+            <value>1954</value>
+            <value>1955</value>
+            <value>1956</value>
+            <value>1957</value>
+            <value>1958</value>
+            <value>1959</value>
+            <value>1960</value>
+            <value>1961</value>
+            <value>1962</value>
+            <value>1963</value>
+            <value>1964</value>
+          </bin>
+          <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+            <value>1891</value>
+            <value>1893</value>
+            <value>1894</value>
+            <value>1895</value>
+            <value>1896</value>
+            <value>1897</value>
+            <value>1899</value>
+          </bin>
+          <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+            <value>1900</value>
+            <value>1901</value>
+            <value>1903</value>
+            <value>1904</value>
+            <value>1905</value>
+            <value>1906</value>
+            <value>1907</value>
+            <value>1909</value>
+            <value>1910</value>
+            <value>1911</value>
+            <value>1912</value>
+            <value>1913</value>
+            <value>1915</value>
+            <value>1916</value>
+            <value>1917</value>
+            <value>1918</value>
+            <value>1919</value>
+            <value>1920</value>
+            <value>1921</value>
+            <value>1922</value>
+            <value>1923</value>
+            <value>1924</value>
+          </bin>
+          <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+            <value>1965</value>
+            <value>1966</value>
+            <value>1967</value>
+            <value>1968</value>
+            <value>1969</value>
+            <value>1970</value>
+            <value>1971</value>
+            <value>1972</value>
+            <value>1973</value>
+            <value>1974</value>
+            <value>1975</value>
+            <value>1976</value>
+            <value>1977</value>
+            <value>1978</value>
+            <value>1979</value>
+          </bin>
+          <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+            <value>1980</value>
+            <value>1981</value>
+            <value>1982</value>
+            <value>1983</value>
+            <value>1984</value>
+            <value>1985</value>
+            <value>1986</value>
+            <value>1987</value>
+            <value>1988</value>
+            <value>1989</value>
+            <value>1990</value>
+            <value>1991</value>
+            <value>1992</value>
+            <value>1993</value>
+            <value>1994</value>
+            <value>1995</value>
+            <value>1996</value>
+            <value>1997</value>
+            <value>1998</value>
+            <value>1999</value>
+            <value>2000</value>
+          </bin>
+          <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+            <value>2001</value>
+            <value>2002</value>
+            <value>2003</value>
+          </bin>
+          <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+            <value>1857</value>
+            <value>1858</value>
+            <value>1863</value>
+            <value>1874</value>
+            <value>1884</value>
+            <value>1885</value>
+            <value>1886</value>
+            <value>1887</value>
+            <value>1888</value>
+            <value>1889</value>
+            <value>1890</value>
+          </bin>
+          <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+            <value>1925</value>
+            <value>1926</value>
+            <value>1927</value>
+            <value>1928</value>
+            <value>1929</value>
+            <value>1930</value>
+            <value>1931</value>
+            <value>1932</value>
+            <value>1933</value>
+            <value>1934</value>
+            <value>1935</value>
+            <value>1936</value>
+            <value>1937</value>
+            <value>1938</value>
+            <value>1939</value>
+            <value>1940</value>
+            <value>1941</value>
+            <value>1942</value>
+            <value>1943</value>
+            <value>1944</value>
+            <value>1945</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+          <bin default-name='false' value='&quot;Female&quot;'>
+            <value>2</value>
+          </bin>
+          <bin default-name='false' value='&quot;Male&quot;'>
+            <value>1</value>
+          </bin>
+          <bin default-name='false' value='&quot;Unknown&quot;'>
+            <value>0</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Starttime (Month / Year)]' role='dimension' type='ordinal' user:agg-type='MY' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+        <calculation class='tableau' formula='(DATEPART(&apos;year&apos;, [starttime])*100 + DATEPART(&apos;month&apos;, [starttime]))' />
+      </column>
+      <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+        <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Stoptime (Month / Year)]' role='dimension' type='ordinal' user:agg-type='MY' user:base-field='stoptime' user:ui-builder='date-bin-builder'>
+        <calculation class='tableau' formula='(DATEPART(&apos;year&apos;, [stoptime])*100 + DATEPART(&apos;month&apos;, [stoptime]))' />
+      </column>
+      <column datatype='datetime' name='[Stoptime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='stoptime' user:ui-builder='date-bin-builder'>
+        <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [stoptime])' />
+      </column>
+      <column aggregation='Sum' caption='Bikeid' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+      <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='End Station Id' datatype='integer' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Start Station Id' datatype='integer' name='[start station id]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <column-instance column='[Number of Records]' derivation='Avg' name='[avg:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[bikeid]' derivation='Avg' name='[avg:bikeid:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration]' derivation='Avg' name='[avg:tripduration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Median' name='[med:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration]' derivation='Median' name='[med:tripduration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Stoptime (Years)]' derivation='None' name='[none:Stoptime (Years):ok]' pivot='key' type='ordinal' />
+      <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[bikeid]' derivation='Sum' name='[sum:bikeid:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration]' derivation='Sum' name='[sum:tripduration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Var' name='[var:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration]' derivation='Var' name='[var:tripduration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration]' derivation='VarP' name='[vrp:tripduration:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Gender (group),Starttime (Years))' hidden='true' name='[Action (Gender (group),Starttime (Years))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Gender (group)]' />
+          <groupfilter function='level-members' level='[none:Starttime (Years):ok]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/HHeatley/Documents/GitHub/ClassSubmissions/Submissions/Tableau/data/Bicycle Routes.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>tripduration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tripduration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tripduration</remote-alias>
+              <ordinal>0</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29949</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>starttime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[starttime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>starttime</remote-alias>
+              <ordinal>1</ordinal>
+              <family>all.txt</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>69266673</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stoptime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[stoptime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stoptime</remote-alias>
+              <ordinal>2</ordinal>
+              <family>all.txt</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>69651245</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[start station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station id</remote-alias>
+              <ordinal>3</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1116</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>all.txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1178</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station latitude</remote-alias>
+              <ordinal>5</ordinal>
+              <family>all.txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1231</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station longitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>all.txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1248</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[end station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1093</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station name</remote-alias>
+              <ordinal>8</ordinal>
+              <family>all.txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1139</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station latitude</remote-alias>
+              <ordinal>9</ordinal>
+              <family>all.txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1185</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station longitude</remote-alias>
+              <ordinal>10</ordinal>
+              <family>all.txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1223</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bikeid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bikeid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bikeid</remote-alias>
+              <ordinal>11</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>38633</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usertype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usertype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usertype</remote-alias>
+              <ordinal>12</ordinal>
+              <family>all.txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[birth year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birth year</remote-alias>
+              <ordinal>13</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>14</ordinal>
+              <family>all.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.586721' measure-ordering='alphabetic' measure-percentage='0.413279' rowDisplayCount='800000' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:tripduration:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[var:tripduration:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:tripduration:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[vrp:tripduration:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[cnt:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[var:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:bikeid:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:bikeid:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:start station name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Broadway &amp; E 22 St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;W 21 St &amp; 6 Ave&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;E 17 St &amp; Broadway&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8 Ave &amp; W 33 St&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;West St &amp; Chambers St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Broadway &amp; E 14 St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pershing Square North&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Lafayette St &amp; E 8 St&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;W 20 St &amp; 11 Ave&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;8 Ave &amp; W 31 St&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Stoptime (Years):ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>#2016-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>#2015-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>#2018-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>#2014-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>#2017-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>#2013-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>#2019-01-01 00:00:00#</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:usertype:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Subscriber&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;usertype&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;User Type&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Customer&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Age Groups]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;G.I. Gen.: 1900-1924&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;</bucket>
+            </map>
+            <map to='#9f3632'>
+              <bucket>&quot;Baby Boomers: 1946-1964&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gen. X: 1965-1979&quot;</bucket>
+            </map>
+            <map to='#bd603b'>
+              <bucket>&quot;Extremely Elderly: 1891-1899&quot;</bucket>
+            </map>
+            <map to='#d38c54'>
+              <bucket>&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Silent Gen.: 1925-1945&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Millenials (Gen. Y): 1980-2000&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Gender (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Riders by gender' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Gender (group)' />
+        <param name='target' value='Riders by gender' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Riders by gender' type='sheet' worksheet='Ridership trends by gender' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Riders by gender' />
+      </command>
+    </action>
+    <action caption='Highlight 2 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Anomalies (click &quot;Go to sheet&quot; for analysis' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Stoptime (Years),Usertype' />
+        <param name='target' value='Anomalies (click &quot;Go to sheet&quot; for analysis' />
+      </command>
+    </action>
+    <action caption='Highlight 3 (generated)' name='[Action4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Bike stations by gender' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Gender (group)' />
+        <param name='target' value='Bike stations by gender' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='2015 data dip'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Color shows details about Stoptime (Years).  Size shows sum of Number of Records.  </run>
+            <run bold='true'>Note that 2015 is practically non-existent; note that a quarter of the overall records are without a timestamp, possibly pointing back to the 2015 data dip.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Stoptime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='stoptime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [stoptime])' />
+            </column>
+            <column-instance column='[Stoptime (Years)]' derivation='None' name='[none:Stoptime (Years):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Stoptime (Years)]' derivation='None' name='[none:Stoptime (Years):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]' direction='ASC'>
+            <dictionary>
+              <bucket>#2015-01-01 00:00:00#</bucket>
+              <bucket>%null%</bucket>
+              <bucket>#2019-01-01 00:00:00#</bucket>
+              <bucket>#2018-01-01 00:00:00#</bucket>
+              <bucket>#2017-01-01 00:00:00#</bucket>
+              <bucket>#2016-01-01 00:00:00#</bucket>
+              <bucket>#2014-01-01 00:00:00#</bucket>
+              <bucket>#2013-01-01 00:00:00#</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):qk]' num-steps='7' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]' />
+              <wedge-size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+              <size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):qk]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='139'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Stoptime (Years): </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>% of Total Number of Records along Table (Across): </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Number of Records: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields />
+                      <y-fields />
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]</field>
+                      <field>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):qk]</field>
+                      <field>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</field>
+                      <field>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>#2015-01-01 00:00:00#</value>
+                    <value>#2015-01-01 00:00:00#</value>
+                    <value>52876</value>
+                    <value>0.00059626032372100187</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-277' y='-100' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{A67ADB40-6F5E-4196-AFA7-E2B9CCC8D477}' />
+    </worksheet>
+    <worksheet name='2016 station popularity by gender vs. gender ratio in tract'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Map based on average of Start Station Longitude and average of Start Station Latitude.  Color shows details about Gender (group).  Size shows count of Number of Records.  Details are shown for Start Station Name. Map coloring shows 2016 Male/Female Ratio by Zip Code. The data is filtered on # of records for Starttime (MY) in 2016.  </run>
+            <run bold='true'>There are some curiosities of heavy male ridership in Jersey City and Pershing Square (a tourist hub), though when looked at against male/female ration gradients on the Census map layer, this is not necessary a phenomenon.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[start station latitude]' derivation='Avg' name='[avg:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='Avg' name='[avg:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[starttime]' derivation='MY' name='[my:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[my:starttime:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[my:starttime:ok]' member='201601' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201602' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201603' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201604' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201605' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201606' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201607' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201608' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201609' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201610' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201611' />
+              <groupfilter function='member' level='[my:starttime:ok]' member='201612' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[my:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:start station longitude:qk]' field-type='quantitative' max='-8221733.768489467' min='-8251021.324934856' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:start station latitude:qk]' field-type='quantitative' max='4986107.5501257796' min='4960811.6419823198' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='true' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='Zip Code Boundaries' value='true' />
+            <format attr='enabled' id='Zip Code Labels' value='true' />
+            <format attr='enabled' id='place-suburb' value='true' />
+            <format attr='enabled' id='place-neighborhood' value='true' />
+            <format attr='enabled' id='place-village' value='true' />
+            <format attr='enabled' id='place-town' value='true' />
+            <format attr='enabled' id='place-islands' value='true' />
+            <format attr='enabled' id='place-city-sm' value='true' />
+            <format attr='enabled' id='place-city-md-s' value='true' />
+            <format attr='enabled' id='place-city-md-n' value='true' />
+            <format attr='enabled' id='place-city-lg-s' value='true' />
+            <format attr='enabled' id='place-city-lg-n' value='true' />
+            <format attr='enabled' id='place-capital-s' value='true' />
+            <format attr='enabled' id='place-capital-n' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Zip Code' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[cnt:Number of Records:qk]' />
+              <lod column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Gender (group):&#9;</run>
+                <run bold='true'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Start Station Name:&#9;</run>
+                <run bold='true'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Count of Number of Records:&#9;</run>
+                <run bold='true'>&lt;[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[cnt:Number of Records:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:start station latitude:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[avg:start station longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{42FA0208-43C2-4D8B-9A49-BADEF901F445}' />
+    </worksheet>
+    <worksheet name='Ride duration by gender (seconds)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[tripduration]' derivation='Median' name='[med:tripduration:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' />
+              <wedge-size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BCC009F6-FD96-441F-A451-FD7058DDCBD4}' />
+    </worksheet>
+    <worksheet name='Riders Overview'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Gender (group) and Age Groups broken down by Usertype.  Color shows details about Gender (group).  Size shows sum of Number of Records.  The marks are labeled by Gender (group) and Age Groups.</run>
+            <run bold='true'>The largest rider demographics are by far male Gen Xers and Yers, with female Gen Yers (Millenials) in 3rd.  Not surprisingly, gender and other demographic makeup is less knwn among &quot;customers&quot;, or one-time/infrequent users who are not subscribed the Citibike servcie.  In a handful of instances, customer user type was not logged.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+                  <value>1946</value>
+                  <value>1947</value>
+                  <value>1948</value>
+                  <value>1949</value>
+                  <value>1950</value>
+                  <value>1951</value>
+                  <value>1952</value>
+                  <value>1953</value>
+                  <value>1954</value>
+                  <value>1955</value>
+                  <value>1956</value>
+                  <value>1957</value>
+                  <value>1958</value>
+                  <value>1959</value>
+                  <value>1960</value>
+                  <value>1961</value>
+                  <value>1962</value>
+                  <value>1963</value>
+                  <value>1964</value>
+                </bin>
+                <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+                  <value>1891</value>
+                  <value>1893</value>
+                  <value>1894</value>
+                  <value>1895</value>
+                  <value>1896</value>
+                  <value>1897</value>
+                  <value>1899</value>
+                </bin>
+                <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+                  <value>1900</value>
+                  <value>1901</value>
+                  <value>1903</value>
+                  <value>1904</value>
+                  <value>1905</value>
+                  <value>1906</value>
+                  <value>1907</value>
+                  <value>1909</value>
+                  <value>1910</value>
+                  <value>1911</value>
+                  <value>1912</value>
+                  <value>1913</value>
+                  <value>1915</value>
+                  <value>1916</value>
+                  <value>1917</value>
+                  <value>1918</value>
+                  <value>1919</value>
+                  <value>1920</value>
+                  <value>1921</value>
+                  <value>1922</value>
+                  <value>1923</value>
+                  <value>1924</value>
+                </bin>
+                <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+                  <value>1965</value>
+                  <value>1966</value>
+                  <value>1967</value>
+                  <value>1968</value>
+                  <value>1969</value>
+                  <value>1970</value>
+                  <value>1971</value>
+                  <value>1972</value>
+                  <value>1973</value>
+                  <value>1974</value>
+                  <value>1975</value>
+                  <value>1976</value>
+                  <value>1977</value>
+                  <value>1978</value>
+                  <value>1979</value>
+                </bin>
+                <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+                  <value>1980</value>
+                  <value>1981</value>
+                  <value>1982</value>
+                  <value>1983</value>
+                  <value>1984</value>
+                  <value>1985</value>
+                  <value>1986</value>
+                  <value>1987</value>
+                  <value>1988</value>
+                  <value>1989</value>
+                  <value>1990</value>
+                  <value>1991</value>
+                  <value>1992</value>
+                  <value>1993</value>
+                  <value>1994</value>
+                  <value>1995</value>
+                  <value>1996</value>
+                  <value>1997</value>
+                  <value>1998</value>
+                  <value>1999</value>
+                  <value>2000</value>
+                </bin>
+                <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+                  <value>2001</value>
+                  <value>2002</value>
+                  <value>2003</value>
+                </bin>
+                <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+                  <value>1857</value>
+                  <value>1858</value>
+                  <value>1863</value>
+                  <value>1874</value>
+                  <value>1884</value>
+                  <value>1885</value>
+                  <value>1886</value>
+                  <value>1887</value>
+                  <value>1888</value>
+                  <value>1889</value>
+                  <value>1890</value>
+                </bin>
+                <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+                  <value>1925</value>
+                  <value>1926</value>
+                  <value>1927</value>
+                  <value>1928</value>
+                  <value>1929</value>
+                  <value>1930</value>
+                  <value>1931</value>
+                  <value>1932</value>
+                  <value>1933</value>
+                  <value>1934</value>
+                  <value>1935</value>
+                  <value>1936</value>
+                  <value>1937</value>
+                  <value>1938</value>
+                  <value>1939</value>
+                  <value>1940</value>
+                  <value>1941</value>
+                  <value>1942</value>
+                  <value>1943</value>
+                  <value>1944</value>
+                  <value>1945</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]'>
+            <groupfilter function='level-members' level='[Age Groups]' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter from='&quot;Female&quot;' function='range' level='[Gender (group)]' to='&quot;Unknown&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Subscriber&quot;</bucket>
+              <bucket>&quot;Customer&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' />
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</cols>
+      </table>
+      <simple-id uuid='{20C087D7-8E44-4A1B-974A-13D2721C24AA}' />
+    </worksheet>
+    <worksheet name='Ridership anomalies'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>The trend of sum of Number of Records for Starttime (Years) broken down by Age Groups.  Color shows details about Usertype. The view is filtered on Age Groups, Starttime (Years) and Usertype. The Age Groups filter keeps Null and Probably Dead: 1857-1890 (i.e. bad data?). The Starttime (Years) filter ranges from 2016 to 2019. The Usertype filter keeps Null, Customer and Subscriber.  </run>
+            <run bold='true'>Note the shift in null age group Customer user type to &quot;Probably Dead&quot; age group Customer user type, specifically.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+                  <value>1946</value>
+                  <value>1947</value>
+                  <value>1948</value>
+                  <value>1949</value>
+                  <value>1950</value>
+                  <value>1951</value>
+                  <value>1952</value>
+                  <value>1953</value>
+                  <value>1954</value>
+                  <value>1955</value>
+                  <value>1956</value>
+                  <value>1957</value>
+                  <value>1958</value>
+                  <value>1959</value>
+                  <value>1960</value>
+                  <value>1961</value>
+                  <value>1962</value>
+                  <value>1963</value>
+                  <value>1964</value>
+                </bin>
+                <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+                  <value>1891</value>
+                  <value>1893</value>
+                  <value>1894</value>
+                  <value>1895</value>
+                  <value>1896</value>
+                  <value>1897</value>
+                  <value>1899</value>
+                </bin>
+                <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+                  <value>1900</value>
+                  <value>1901</value>
+                  <value>1903</value>
+                  <value>1904</value>
+                  <value>1905</value>
+                  <value>1906</value>
+                  <value>1907</value>
+                  <value>1909</value>
+                  <value>1910</value>
+                  <value>1911</value>
+                  <value>1912</value>
+                  <value>1913</value>
+                  <value>1915</value>
+                  <value>1916</value>
+                  <value>1917</value>
+                  <value>1918</value>
+                  <value>1919</value>
+                  <value>1920</value>
+                  <value>1921</value>
+                  <value>1922</value>
+                  <value>1923</value>
+                  <value>1924</value>
+                </bin>
+                <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+                  <value>1965</value>
+                  <value>1966</value>
+                  <value>1967</value>
+                  <value>1968</value>
+                  <value>1969</value>
+                  <value>1970</value>
+                  <value>1971</value>
+                  <value>1972</value>
+                  <value>1973</value>
+                  <value>1974</value>
+                  <value>1975</value>
+                  <value>1976</value>
+                  <value>1977</value>
+                  <value>1978</value>
+                  <value>1979</value>
+                </bin>
+                <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+                  <value>1980</value>
+                  <value>1981</value>
+                  <value>1982</value>
+                  <value>1983</value>
+                  <value>1984</value>
+                  <value>1985</value>
+                  <value>1986</value>
+                  <value>1987</value>
+                  <value>1988</value>
+                  <value>1989</value>
+                  <value>1990</value>
+                  <value>1991</value>
+                  <value>1992</value>
+                  <value>1993</value>
+                  <value>1994</value>
+                  <value>1995</value>
+                  <value>1996</value>
+                  <value>1997</value>
+                  <value>1998</value>
+                  <value>1999</value>
+                  <value>2000</value>
+                </bin>
+                <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+                  <value>2001</value>
+                  <value>2002</value>
+                  <value>2003</value>
+                </bin>
+                <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+                  <value>1857</value>
+                  <value>1858</value>
+                  <value>1863</value>
+                  <value>1874</value>
+                  <value>1884</value>
+                  <value>1885</value>
+                  <value>1886</value>
+                  <value>1887</value>
+                  <value>1888</value>
+                  <value>1889</value>
+                  <value>1890</value>
+                </bin>
+                <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+                  <value>1925</value>
+                  <value>1926</value>
+                  <value>1927</value>
+                  <value>1928</value>
+                  <value>1929</value>
+                  <value>1930</value>
+                  <value>1931</value>
+                  <value>1932</value>
+                  <value>1933</value>
+                  <value>1934</value>
+                  <value>1935</value>
+                  <value>1936</value>
+                  <value>1937</value>
+                  <value>1938</value>
+                  <value>1939</value>
+                  <value>1940</value>
+                  <value>1941</value>
+                  <value>1942</value>
+                  <value>1943</value>
+                  <value>1944</value>
+                  <value>1945</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+            </column>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Age Groups]' member='%null%' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Extremely Elderly: 1891-2899&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]' included-values='in-range'>
+            <min>#2016-01-01 00:00:00#</min>
+            <max>#2019-01-01 00:00:00#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='91' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups] * [federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk])</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</cols>
+      </table>
+      <simple-id uuid='{D10C574D-2F47-4306-BDAC-E6244FD464BA}' />
+    </worksheet>
+    <worksheet name='Ridership trends by gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+            </column>
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter from='&quot;Female&quot;' function='range' level='[Gender (group)]' to='&quot;Unknown&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</cols>
+      </table>
+      <simple-id uuid='{FC435934-750A-4629-AE77-8B727C4F044E}' />
+    </worksheet>
+    <worksheet name='Ridership trends by middle to younger age and gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+                  <value>1946</value>
+                  <value>1947</value>
+                  <value>1948</value>
+                  <value>1949</value>
+                  <value>1950</value>
+                  <value>1951</value>
+                  <value>1952</value>
+                  <value>1953</value>
+                  <value>1954</value>
+                  <value>1955</value>
+                  <value>1956</value>
+                  <value>1957</value>
+                  <value>1958</value>
+                  <value>1959</value>
+                  <value>1960</value>
+                  <value>1961</value>
+                  <value>1962</value>
+                  <value>1963</value>
+                  <value>1964</value>
+                </bin>
+                <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+                  <value>1891</value>
+                  <value>1893</value>
+                  <value>1894</value>
+                  <value>1895</value>
+                  <value>1896</value>
+                  <value>1897</value>
+                  <value>1899</value>
+                </bin>
+                <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+                  <value>1900</value>
+                  <value>1901</value>
+                  <value>1903</value>
+                  <value>1904</value>
+                  <value>1905</value>
+                  <value>1906</value>
+                  <value>1907</value>
+                  <value>1909</value>
+                  <value>1910</value>
+                  <value>1911</value>
+                  <value>1912</value>
+                  <value>1913</value>
+                  <value>1915</value>
+                  <value>1916</value>
+                  <value>1917</value>
+                  <value>1918</value>
+                  <value>1919</value>
+                  <value>1920</value>
+                  <value>1921</value>
+                  <value>1922</value>
+                  <value>1923</value>
+                  <value>1924</value>
+                </bin>
+                <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+                  <value>1965</value>
+                  <value>1966</value>
+                  <value>1967</value>
+                  <value>1968</value>
+                  <value>1969</value>
+                  <value>1970</value>
+                  <value>1971</value>
+                  <value>1972</value>
+                  <value>1973</value>
+                  <value>1974</value>
+                  <value>1975</value>
+                  <value>1976</value>
+                  <value>1977</value>
+                  <value>1978</value>
+                  <value>1979</value>
+                </bin>
+                <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+                  <value>1980</value>
+                  <value>1981</value>
+                  <value>1982</value>
+                  <value>1983</value>
+                  <value>1984</value>
+                  <value>1985</value>
+                  <value>1986</value>
+                  <value>1987</value>
+                  <value>1988</value>
+                  <value>1989</value>
+                  <value>1990</value>
+                  <value>1991</value>
+                  <value>1992</value>
+                  <value>1993</value>
+                  <value>1994</value>
+                  <value>1995</value>
+                  <value>1996</value>
+                  <value>1997</value>
+                  <value>1998</value>
+                  <value>1999</value>
+                  <value>2000</value>
+                </bin>
+                <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+                  <value>2001</value>
+                  <value>2002</value>
+                  <value>2003</value>
+                </bin>
+                <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+                  <value>1857</value>
+                  <value>1858</value>
+                  <value>1863</value>
+                  <value>1874</value>
+                  <value>1884</value>
+                  <value>1885</value>
+                  <value>1886</value>
+                  <value>1887</value>
+                  <value>1888</value>
+                  <value>1889</value>
+                  <value>1890</value>
+                </bin>
+                <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+                  <value>1925</value>
+                  <value>1926</value>
+                  <value>1927</value>
+                  <value>1928</value>
+                  <value>1929</value>
+                  <value>1930</value>
+                  <value>1931</value>
+                  <value>1932</value>
+                  <value>1933</value>
+                  <value>1934</value>
+                  <value>1935</value>
+                  <value>1936</value>
+                  <value>1937</value>
+                  <value>1938</value>
+                  <value>1939</value>
+                  <value>1940</value>
+                  <value>1941</value>
+                  <value>1942</value>
+                  <value>1943</value>
+                  <value>1944</value>
+                  <value>1945</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+            </column>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Action (Gender (group),Starttime (Years))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Gender (group)]' />
+              <groupfilter function='level-members' level='[none:Starttime (Years):ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Baby Boomers: 1946-1964&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Gen. X: 1965-1979&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Generation X: 1965-1979&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Millenials (Gen. Y): 1980-2000&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Millenials (Generation Y): 1980-2000&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;New Silent Generation (Generation Z): 2001-2003&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Probably Dead (i.e. bad data?)&quot;</bucket>
+              <bucket>&quot;Extremely Elderly&quot;</bucket>
+              <bucket>&quot;G.I. Generation&quot;</bucket>
+              <bucket>&quot;Silent Generation&quot;</bucket>
+              <bucket>&quot;Baby Boomers&quot;</bucket>
+              <bucket>&quot;Generation X&quot;</bucket>
+              <bucket>&quot;Millenials (Generation Y)&quot;</bucket>
+              <bucket>&quot;New Silent Generation (Generation Z)&quot;</bucket>
+              <bucket>%null%</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Unknown&quot;</bucket>
+              <bucket>&quot;Male&quot;</bucket>
+              <bucket>&quot;Female&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Action (Gender (group),Starttime (Years))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='91' />
+            <format attr='display' class='0' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='220' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups] * [federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk])</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</cols>
+      </table>
+      <simple-id uuid='{6D5B35AC-84EE-445D-A9DD-C599A913892A}' />
+    </worksheet>
+    <worksheet name='Ridership trends by senior citizens and gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+                  <value>1946</value>
+                  <value>1947</value>
+                  <value>1948</value>
+                  <value>1949</value>
+                  <value>1950</value>
+                  <value>1951</value>
+                  <value>1952</value>
+                  <value>1953</value>
+                  <value>1954</value>
+                  <value>1955</value>
+                  <value>1956</value>
+                  <value>1957</value>
+                  <value>1958</value>
+                  <value>1959</value>
+                  <value>1960</value>
+                  <value>1961</value>
+                  <value>1962</value>
+                  <value>1963</value>
+                  <value>1964</value>
+                </bin>
+                <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+                  <value>1891</value>
+                  <value>1893</value>
+                  <value>1894</value>
+                  <value>1895</value>
+                  <value>1896</value>
+                  <value>1897</value>
+                  <value>1899</value>
+                </bin>
+                <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+                  <value>1900</value>
+                  <value>1901</value>
+                  <value>1903</value>
+                  <value>1904</value>
+                  <value>1905</value>
+                  <value>1906</value>
+                  <value>1907</value>
+                  <value>1909</value>
+                  <value>1910</value>
+                  <value>1911</value>
+                  <value>1912</value>
+                  <value>1913</value>
+                  <value>1915</value>
+                  <value>1916</value>
+                  <value>1917</value>
+                  <value>1918</value>
+                  <value>1919</value>
+                  <value>1920</value>
+                  <value>1921</value>
+                  <value>1922</value>
+                  <value>1923</value>
+                  <value>1924</value>
+                </bin>
+                <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+                  <value>1965</value>
+                  <value>1966</value>
+                  <value>1967</value>
+                  <value>1968</value>
+                  <value>1969</value>
+                  <value>1970</value>
+                  <value>1971</value>
+                  <value>1972</value>
+                  <value>1973</value>
+                  <value>1974</value>
+                  <value>1975</value>
+                  <value>1976</value>
+                  <value>1977</value>
+                  <value>1978</value>
+                  <value>1979</value>
+                </bin>
+                <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+                  <value>1980</value>
+                  <value>1981</value>
+                  <value>1982</value>
+                  <value>1983</value>
+                  <value>1984</value>
+                  <value>1985</value>
+                  <value>1986</value>
+                  <value>1987</value>
+                  <value>1988</value>
+                  <value>1989</value>
+                  <value>1990</value>
+                  <value>1991</value>
+                  <value>1992</value>
+                  <value>1993</value>
+                  <value>1994</value>
+                  <value>1995</value>
+                  <value>1996</value>
+                  <value>1997</value>
+                  <value>1998</value>
+                  <value>1999</value>
+                  <value>2000</value>
+                </bin>
+                <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+                  <value>2001</value>
+                  <value>2002</value>
+                  <value>2003</value>
+                </bin>
+                <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+                  <value>1857</value>
+                  <value>1858</value>
+                  <value>1863</value>
+                  <value>1874</value>
+                  <value>1884</value>
+                  <value>1885</value>
+                  <value>1886</value>
+                  <value>1887</value>
+                  <value>1888</value>
+                  <value>1889</value>
+                  <value>1890</value>
+                </bin>
+                <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+                  <value>1925</value>
+                  <value>1926</value>
+                  <value>1927</value>
+                  <value>1928</value>
+                  <value>1929</value>
+                  <value>1930</value>
+                  <value>1931</value>
+                  <value>1932</value>
+                  <value>1933</value>
+                  <value>1934</value>
+                  <value>1935</value>
+                  <value>1936</value>
+                  <value>1937</value>
+                  <value>1938</value>
+                  <value>1939</value>
+                  <value>1940</value>
+                  <value>1941</value>
+                  <value>1942</value>
+                  <value>1943</value>
+                  <value>1944</value>
+                  <value>1945</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+            </column>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Action (Gender (group),Starttime (Years))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Gender (group)]' />
+              <groupfilter function='level-members' level='[none:Starttime (Years):ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Extremely Elderly&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Extremely Elderly: 1891-1899&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Extremely Elderly: 1891-2899&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;G.I. Gen.: 1900-1924&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;G.I. Generation&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;G.I. Generation: 1900-1924&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Probably Dead (i.e. bad data?)&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Silent Gen.: 1925-1945&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Silent Generation&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Silent Generation: 1925-1945&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;</bucket>
+              <bucket>&quot;G.I. Generation: 1900-1924&quot;</bucket>
+              <bucket>&quot;Silent Generation: 1925-1945&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Unknown&quot;</bucket>
+              <bucket>&quot;Male&quot;</bucket>
+              <bucket>&quot;Female&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Action (Gender (group),Starttime (Years))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='91' />
+            <format attr='width' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' value='60' />
+            <format attr='display' class='0' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='196' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups] * [federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk])</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</cols>
+      </table>
+      <simple-id uuid='{BC2E4294-4A03-4CF2-8CF6-D28304D3113D}' />
+    </worksheet>
+    <worksheet name='Rides by user type and gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[tripduration]' derivation='Sum' name='[sum:tripduration:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:tripduration:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]</cols>
+      </table>
+      <simple-id uuid='{7AFCF34B-A78C-41B8-8868-14C357363EA0}' />
+    </worksheet>
+    <worksheet name='Top 10 end stations by gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter from='&quot;Female&quot;' function='range' level='[Gender (group)]' to='&quot;Unknown&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:end station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]' direction='DESC' using='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</cols>
+      </table>
+      <simple-id uuid='{61FC60DB-C1D9-4BAC-ABDF-DF190EC79207}' />
+    </worksheet>
+    <worksheet name='Top 10 end stations female'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter function='member' level='[Gender (group)]' member='&quot;Female&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:end station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]' direction='DESC' using='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height-header' value='17' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</cols>
+      </table>
+      <simple-id uuid='{A271D92C-DA92-4D66-8717-EECC4F172CA6}' />
+    </worksheet>
+    <worksheet name='Top 10 start stations by gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:end station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]' direction='DESC' using='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</cols>
+      </table>
+      <simple-id uuid='{85CA23FA-A2C2-489F-8274-C55787F82A69}' />
+    </worksheet>
+    <worksheet name='Top 10 start stations female'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter function='member' level='[Gender (group)]' member='&quot;Female&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:end station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start station name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]' direction='DESC' using='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:end station name:nk]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+              <text column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:start station name:nk]</cols>
+      </table>
+      <simple-id uuid='{00326D23-D7BC-45EB-A65D-576620A4D7AE}' />
+    </worksheet>
+    <worksheet name='Trends in Unknown Gender Type'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Details are shown for Gender (group) filter Unknown. The Starttime (Years) filter ranges from 2013 to 2019.  </run>
+            <run bold='true'>Note that unknown gender types drop off in 2016 for null age groups, meaning that unknown  gender types are being assigned somehow to other age groups, perhaps in some cases in error due to the extremely advanced age designation of these groups.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bicycle Routes' name='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ai8v7f0rhtwrv1g6mvor12yl9bw'>
+            <column datatype='string' name='[Age Groups]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[birth year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Baby Boomers: 1946-1964&quot;'>
+                  <value>1946</value>
+                  <value>1947</value>
+                  <value>1948</value>
+                  <value>1949</value>
+                  <value>1950</value>
+                  <value>1951</value>
+                  <value>1952</value>
+                  <value>1953</value>
+                  <value>1954</value>
+                  <value>1955</value>
+                  <value>1956</value>
+                  <value>1957</value>
+                  <value>1958</value>
+                  <value>1959</value>
+                  <value>1960</value>
+                  <value>1961</value>
+                  <value>1962</value>
+                  <value>1963</value>
+                  <value>1964</value>
+                </bin>
+                <bin default-name='false' value='&quot;Extremely Elderly: 1891-1899&quot;'>
+                  <value>1891</value>
+                  <value>1893</value>
+                  <value>1894</value>
+                  <value>1895</value>
+                  <value>1896</value>
+                  <value>1897</value>
+                  <value>1899</value>
+                </bin>
+                <bin default-name='false' value='&quot;G.I. Gen.: 1900-1924&quot;'>
+                  <value>1900</value>
+                  <value>1901</value>
+                  <value>1903</value>
+                  <value>1904</value>
+                  <value>1905</value>
+                  <value>1906</value>
+                  <value>1907</value>
+                  <value>1909</value>
+                  <value>1910</value>
+                  <value>1911</value>
+                  <value>1912</value>
+                  <value>1913</value>
+                  <value>1915</value>
+                  <value>1916</value>
+                  <value>1917</value>
+                  <value>1918</value>
+                  <value>1919</value>
+                  <value>1920</value>
+                  <value>1921</value>
+                  <value>1922</value>
+                  <value>1923</value>
+                  <value>1924</value>
+                </bin>
+                <bin default-name='false' value='&quot;Gen. X: 1965-1979&quot;'>
+                  <value>1965</value>
+                  <value>1966</value>
+                  <value>1967</value>
+                  <value>1968</value>
+                  <value>1969</value>
+                  <value>1970</value>
+                  <value>1971</value>
+                  <value>1972</value>
+                  <value>1973</value>
+                  <value>1974</value>
+                  <value>1975</value>
+                  <value>1976</value>
+                  <value>1977</value>
+                  <value>1978</value>
+                  <value>1979</value>
+                </bin>
+                <bin default-name='false' value='&quot;Millenials (Gen. Y): 1980-2000&quot;'>
+                  <value>1980</value>
+                  <value>1981</value>
+                  <value>1982</value>
+                  <value>1983</value>
+                  <value>1984</value>
+                  <value>1985</value>
+                  <value>1986</value>
+                  <value>1987</value>
+                  <value>1988</value>
+                  <value>1989</value>
+                  <value>1990</value>
+                  <value>1991</value>
+                  <value>1992</value>
+                  <value>1993</value>
+                  <value>1994</value>
+                  <value>1995</value>
+                  <value>1996</value>
+                  <value>1997</value>
+                  <value>1998</value>
+                  <value>1999</value>
+                  <value>2000</value>
+                </bin>
+                <bin default-name='false' value='&quot;New Silent Gen. (Gen. Z): 2001-2003&quot;'>
+                  <value>2001</value>
+                  <value>2002</value>
+                  <value>2003</value>
+                </bin>
+                <bin default-name='false' value='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;'>
+                  <value>1857</value>
+                  <value>1858</value>
+                  <value>1863</value>
+                  <value>1874</value>
+                  <value>1884</value>
+                  <value>1885</value>
+                  <value>1886</value>
+                  <value>1887</value>
+                  <value>1888</value>
+                  <value>1889</value>
+                  <value>1890</value>
+                </bin>
+                <bin default-name='false' value='&quot;Silent Gen.: 1925-1945&quot;'>
+                  <value>1925</value>
+                  <value>1926</value>
+                  <value>1927</value>
+                  <value>1928</value>
+                  <value>1929</value>
+                  <value>1930</value>
+                  <value>1931</value>
+                  <value>1932</value>
+                  <value>1933</value>
+                  <value>1934</value>
+                  <value>1935</value>
+                  <value>1936</value>
+                  <value>1937</value>
+                  <value>1938</value>
+                  <value>1939</value>
+                  <value>1940</value>
+                  <value>1941</value>
+                  <value>1942</value>
+                  <value>1943</value>
+                  <value>1944</value>
+                  <value>1945</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>2</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+                <bin default-name='false' value='&quot;Unknown&quot;'>
+                  <value>0</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[Starttime (Years)]' role='dimension' type='quantitative' user:agg-type='Year-Trunc' user:base-field='starttime' user:ui-builder='date-bin-builder'>
+              <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;, [starttime])' scope-isolation='false' />
+            </column>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Starttime (Years)]' derivation='None' name='[none:Starttime (Years):qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Age Groups]' member='%null%' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Extremely Elderly: 1891-1899&quot;' />
+              <groupfilter function='member' level='[Age Groups]' member='&quot;Probably Dead: 1857-1890 (i.e. bad data?)&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]'>
+            <groupfilter function='member' level='[Gender (group)]' member='&quot;Unknown&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]' included-values='in-range'>
+            <min>#2013-01-01 00:00:00#</min>
+            <max>#2019-01-01 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]</column>
+            <column>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' />
+              <lod column='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Starttime (Years):qk]</cols>
+      </table>
+      <simple-id uuid='{B71E09A6-D900-4ABA-8002-D86C359E4748}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Anomalies (click &quot;Go to sheet&quot; for analysis'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='63375' id='1' name='2015 data dip' show-caption='true' w='50991' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98000' id='8' name='Ridership anomalies' show-caption='true' w='47409' x='51791' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='34625' id='10' name='Trends in Unknown Gender Type' show-caption='true' w='50991' x='800' y='64375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='12750' id='11' name='Trends in Unknown Gender Type' pane-specification-id='5' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' type='color' w='13300' x='37800' y='65000' />
+        <zone h='9750' id='9' name='Ridership anomalies' pane-specification-id='5' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]' type='color' w='14000' x='81100' y='44000' />
+        <zone h='22250' id='6' name='2015 data dip' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]' type='color' w='10000' x='40200' y='2875' />
+      </zones>
+      <simple-id uuid='{F7D84A99-7C34-4807-91E3-EB7B0466EC18}' />
+    </dashboard>
+    <dashboard name='Bike stations by gender'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='Top 10 start stations by gender' w='41200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='9' name='Top 10 end stations by gender' w='41200' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='10' name='Top 10 start stations female' w='41200' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='11' name='Top 10 end stations female' w='41200' x='42000' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='10750' id='8' name='Top 10 start stations by gender' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='64' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='65' param='vert' type='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Top 10 start stations by gender' w='41200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10750' id='8' name='Top 10 start stations by gender' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='9' is-fixed='true' name='Top 10 end stations by gender' w='41200' x='42000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='10' is-fixed='true' name='Top 10 start stations female' w='41200' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='Top 10 end stations female' w='41200' x='42000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{402F7E7C-44AF-402E-9716-D9952BC4373F}' />
+    </dashboard>
+    <dashboard name='Citibike Analytics' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Citibike riders overview' captured-sheet='Riders Overview' id='1' />
+                  <story-point caption='Rider trends by gender' captured-sheet='Riders by gender' id='2' />
+                  <story-point caption='Rides by gender' captured-sheet='Rides by gender' id='3' />
+                  <story-point caption='Rider data anomalies' captured-sheet='Anomalies (click &quot;Go to sheet&quot; for analysis' id='4' />
+                  <story-point caption='2016 Citibike station snapshot by gender' captured-sheet='2016 station popularity by gender vs. gender ratio in tract' id='5' />
+                  <story-point caption='Bike stations by gender' captured-sheet='Bike stations by gender' id='6' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{41FBB593-2791-42EE-AC95-03F8C90D9D25}' />
+    </dashboard>
+    <dashboard name='Riders by gender'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='49000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='1' name='Ridership trends by gender' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='49000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='10750' id='6' name='Ridership trends by gender' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49000' id='7' name='Ridership trends by senior citizens and gender' w='45400' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='8' name='Ridership trends by middle to younger age and gender' w='53000' x='46200' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{5A8A5A4C-EB15-48BB-9FC9-0540CB925DF4}' />
+    </dashboard>
+    <dashboard name='Rides by gender'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='98000' id='1' name='Ride duration by gender (seconds)' w='41200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98000' id='8' name='Rides by user type and gender' w='41200' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='13250' id='6' name='Ride duration by gender (seconds)' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5750' id='7' name='Ride duration by gender (seconds)' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' type='size' w='16000' x='83200' y='14250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='51' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='52' param='vert' type='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='98000' id='1' is-fixed='true' name='Ride duration by gender (seconds)' w='41200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13250' id='6' name='Ride duration by gender (seconds)' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5750' id='7' name='Ride duration by gender (seconds)' pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' type='size' w='16000' x='83200' y='14250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='8' is-fixed='true' name='Rides by user type and gender' w='41200' x='42000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1A743400-001D-4655-B39E-09002B504F55}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Citibike Analytics'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{5F5E1F94-94BC-4F4D-8226-A6F28BCD1738}' />
+    </window>
+    <window class='worksheet' hidden='true' name='2015 data dip'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:Stoptime (Years):ok]' type='color' />
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[sum:Number of Records:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{BF5FA139-554F-42CA-9022-F9975D090973}' />
+    </window>
+    <window class='worksheet' hidden='true' name='2016 station popularity by gender vs. gender ratio in tract'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='typeinlist' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[my:starttime:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+            <card pane-specification-id='0' type='map' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='16' />
+      </viewpoint>
+      <simple-id uuid='{E445E2AC-B519-487E-AB9B-34C1C5CF6544}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Anomalies (click &quot;Go to sheet&quot; for analysis'>
+      <viewpoints>
+        <viewpoint name='2015 data dip'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Ridership anomalies'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trends in Unknown Gender Type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C8996789-D8A7-4563-A80A-31223A37948D}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Bike stations by gender'>
+      <viewpoints>
+        <viewpoint name='Top 10 end stations by gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 end stations female'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 start stations by gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 start stations female'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C7A6B520-A1FA-4901-BADF-2929E9FB622A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Ride duration by gender (seconds)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='110'>
+            <card type='columns' />
+          </strip>
+          <strip size='113'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[med:tripduration:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1EC77193-002B-462C-8785-FE138F390CF9}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Riders Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='86'>
+            <card type='columns' />
+          </strip>
+          <strip size='72'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+            <card param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' type='filter' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7A9BD7CF-6AE5-4F56-86BF-03F0B249E2F4}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Riders by gender'>
+      <viewpoints>
+        <viewpoint name='Ridership trends by gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Ridership trends by middle to younger age and gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Ridership trends by senior citizens and gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{CA445769-E908-4897-861C-7A56795E0C29}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Ridership anomalies'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='110'>
+            <card type='columns' />
+          </strip>
+          <strip size='113'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='5' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[none:usertype:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7C4DB637-A94C-40F5-B164-A3FB448FB66D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Ridership trends by gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='86'>
+            <card type='columns' />
+          </strip>
+          <strip size='72'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{09334EAE-4A69-4356-8B5D-9DD9ACB56547}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Ridership trends by middle to younger age and gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='110'>
+            <card type='columns' />
+          </strip>
+          <strip size='113'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='4' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{486DB29C-3B82-4FE6-B22D-9FD14B26427A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Ridership trends by senior citizens and gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='110'>
+            <card type='columns' />
+          </strip>
+          <strip size='113'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='4' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E3679919-40B5-418D-87F0-9C37D0166E62}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Rides by gender'>
+      <viewpoints>
+        <viewpoint name='Ride duration by gender (seconds)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rides by user type and gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{AF866BEC-F234-49C8-B873-38B67B9F6DA0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Rides by user type and gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9B1C19A0-6269-4603-88F5-8A3E98BFF861}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top 10 end stations by gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48388839-149E-4424-B46F-42CB5BD1BF21}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top 10 end stations female'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{31341B9E-78E0-48C7-B4DC-7BD454F93E63}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top 10 start stations by gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Gender (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{300DCB1C-5A76-42BD-B634-7C7801DA42D8}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top 10 start stations female'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{65AC7489-CAD6-4E2C-9378-C959D8EBB627}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Trends in Unknown Gender Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.1ai8v7f0rhtwrv1g6mvor12yl9bw].[Age Groups]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{F00BB01F-0B14-4983-80DA-F8DD0C3B6320}' />
+    </window>
+  </windows>
+</workbook>
